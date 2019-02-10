@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html>
+
+<h1 style="color:#F08080">
+Mobile Aplication Development
+</h1>
+
+<h2 style="color:#FFA07A">
+Andres Rodriguez
+</h2>
+
+<body background="explosion.jpg"> 
+<p>
+
+<audio controls>
+</br>
+  <source src="01-In The Hollow Of Thy Hand.ogg" type="audio/ogg">
+  <source src="01-In The Hollow Of Thy Hand.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</br>
+</br>
+
+<h2 style="color:#DC143C">VIDEO</h2></br>
+
+<b><font size = 5 style="color:#48D1CC">Pc video</font></b>
+<br/>
+<video width="500" controls>
+  <source src="2011-07-073-participating-in-councils-360p-spa.mp4" type="video/mp4">
+  <source src="El_abrigo_una_historia_sobre la_caridad.webm" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>
+</p>
+</br>
+
+<b><font size = 5 style="color:#48D1CC">Youtube Video</font></b></br>
+
+<iframe width="500" height="315" src="https://www.youtube.com/embed/w3QPzUVx3Ps" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen>
+</iframe>
+</p>
+<p style="color:#48D1CC">
+Song in Eureska 
+<a href="https://www.youtube.com/embed/w3QPzUVx3Ps" target="_blank">Lasai, lasai</a>.
+</p>
+
+
+<b><font size = 5 style="color:#48D1CC">Images</font></b></br>
+
+<img id="temple" src="temple seoul.jpg" alt="The Temple" width="420" height="277">
+</br>
+
+<img id="temple" src="https://mobile-cdn.lds.org/71/0f/710f3f0c67ca23d52bb446b9f3b83476a1b4514a/seoul_korea_temple_lds.jpeg" 
+alt="The Temple" width="420" height="277">
+
+</script>
+<script>
+<img id="temple" src="https://www.lds.org/temples/details/seoul-korea-temple?lang=eng" 
+alt="The Temple">
+
+</script>
+
+
+
+
+<canvas id="micanvas" width="500px" height="300px">
+    Your browser don't support canvas
+</canvas>
+
+<script>
+
+var c = document.getElementById("micanvas");
+var cxt = c.getContext("2d");
+
+//Degraded title
+var grt = cxt.createLinearGradient(100,100,00,30); //it modifies the degrade
+grt.addColorStop(0,"#20B2AA");  // first color
+grt.addColorStop(0.5,"#FF69B4"); // second color
+grt.addColorStop(1,"#FF00FF"); // third color
+
+cxt.strokeStyle = grt; // Paint lines
+cxt.font = "45px Arial, Times-New-Roman";
+cxt.strokeText("Degraded",50,40); // Text 
+
+// 1st
+var grt2 = cxt.createLinearGradient(50,10,150,0);
+grt2.addColorStop(0,"#B22222");  // 1st color
+grt2.addColorStop(0.3,"#FFA500"); // /2nd color
+grt2.addColorStop(0.6,"#9ACD32"); // 3rd color
+grt2.addColorStop(1,"#00FA9A"); // 4th color
+
+cxt.fillStyle = grt2;
+cxt.fillRect(50,50, 100, 50);
+
+// 2nd
+var grt3 = cxt.createLinearGradient(160,50,250,150);
+grt3.addColorStop(0,"yellow");  
+grt3.addColorStop(0.2,"orange");
+grt3.addColorStop(0.4,"red"); 
+grt3.addColorStop(0.6,"blue");
+cxt.fillStyle = grt3;
+cxt.fillRect(160,50, 100, 50);
+</script>
+
+
+</body> 
+</html>
