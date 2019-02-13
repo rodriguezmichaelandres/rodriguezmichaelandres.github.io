@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 style = "color: blue">JavaScript Objects</h2>
+<h4 style = "color: #FF2394">Please choose a button</h4>
+
+
+<p id="id1"></p>
+<button onclick = "personFunction()"> Person </button>
+
+<script>
+// Create an object:
+function personFunction(){
+var person = {
+				name: "Andres",
+				lastName:" Rodriguez",
+				currentYear: 2019,
+				bithYear: 1994,
+				sport: "Muay Thai",
+				age: 2019 - 1994
+};
+
+// Display some data from the object:
+document.getElementById("id1").innerHTML =
+person.name + " is " + person.age + " years old.";
+console.log(person);
+}
+</script>
+
+<p id="id2"></p>
+<button onclick = "animalFunction()"> Animal </button>
+<script>
+function animalFunction(){
+var animal = 
+			{
+				name: "Bobby",
+				kind: "dog",
+				age: 12,
+				color: "black"
+			};
+			//document.write(animal.name + " is " + animal.age + " years old<br>");
+			//document.write("Hello");
+			document.getElementById("id2").innerHTML = animal.name + " is a " + animal.kind;
+};
+
+</script>
+
+<p id="id3"></p>
+<button onclick = "phoneFunction()"> Phone </button>
+<script>
+function phoneFunction(){
+let cell1 = 
+{
+	phone: "Huawei",
+	model: "Mate 10 Lite",
+	price: 128.00
+};
+//document.write(cell1.phone + " " cell1.model + "</br>");
+document.getElementById("id3").innerHTML = cell1.phone + " " + cell1.model + " costs $" + cell1.price;
+
+}
+</script>
+
+<p id="id4"></p>
+<button onclick = "button()"> Inheritance Book </button>
+<script>
+function button(){
+function Inheritance(bookName, bookAuthor, bookYear) {
+  this.bookName = bookName;
+  this.bookAuthor = bookAuthor;
+  this.bookYear = bookYear;
+}
+
+var favoriteBook = new Inheritance('Un amor en Auschwitz','Francesca Paci', 2017);
+var currentBook = new Inheritance('La ladrona de Libros','Markus Zusak', 2005);
+
+document.getElementById("id4").innerHTML = 
+"My favorite book is \"" + favoriteBook.bookName + "\" of " + favoriteBook.bookAuthor + ". The book I am reading now is \""  + currentBook.bookName + "\" of " + currentBook.bookAuthor + ".";
+}
+</script>
+
+</body>
+</html>
