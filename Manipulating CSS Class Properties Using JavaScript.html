@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1" >
+
+<script>
+document.getElementById("id1").style.fontFamily = "Arial";
+</script>
+Manipulating CSS Class Properties Using JavaScript</h1>
+<p id = "id2"></p>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'green'">
+Green!</button>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'blue'">
+Blue!</button>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'FloralWhite'">
+White!</button>
+</br>
+</br>
+<button type "button" 
+onclick = "document.getElementById('id1').style.background='#aed877'">Background Green
+</button>
+
+<button type "button" 
+onclick = "document.getElementById('id1').style.background='Crimson'">
+Background Crimson 
+</button>
+
+<button type "button" 
+onclick = "document.getElementById('id1').style.background='DarkOrange'"> Background DarkOrange 	
+</button>
+
+</br>
+</br>
+
+<button type="button" 
+onclick="visible()"> Show </button>
+
+<button type="button" 
+onclick="invisible()"> Hide </button>
+</br>
+</br>
+<script>
+document.body.style.outline = "thick solid blue"
+function visible(){
+	document.getElementById('id1').style.visibility = 'visible';
+}
+
+function invisible(){
+	document.getElementById('id1').style.visibility = 'hidden';
+}
+
+document.getElementById("id1").style.outline="thick solid #0000FF";
+document.getElementById("id1").style.cursor="pointer";
+
+</script>
+
+<button type="button" 
+onclick = "document.body.style.backgroundColor='#abfeee'">Background A
+</button>
+
+<button type="button" 
+onclick = "document.body.style.backgroundColor='#FF99FF'">Background B
+</button>
+
+<button type="button" 
+onclick = "document.body.style.backgroundColor='#DEF123'">Background C
+</button>
+</body>
+</html>
