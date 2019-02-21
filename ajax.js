@@ -23,5 +23,3 @@ xhr.onreadystatechange = function()
 xhr.open('GET', "myText.txt", true);
 xhr.send();
 }
-
-buttonCharge.addEventListener('click', chargeContent);
