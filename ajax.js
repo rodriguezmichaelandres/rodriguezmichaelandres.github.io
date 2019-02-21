@@ -1,4 +1,4 @@
-var buttonCharge = document.getElementById('charge');
+//var buttonCharge = document.getElementById('charge');
 
 function chargeContent()
 {
