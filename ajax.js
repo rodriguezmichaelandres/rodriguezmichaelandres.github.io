@@ -16,7 +16,7 @@ xhr.onreadystatechange = function()
 	if(this.readyState == 4 && this.status == 200)
 	{
 		//console.log("readyState = the answer is right & status = the state is right")
-		document.getElementById("content").innerHTML = myText.txt;
+		document.getElementById("content").innerHTML = this.responseText;
 		console.log(this.responseText);
 	}
 };
