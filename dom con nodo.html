@@ -1,0 +1,70 @@
+<!document html>
+<html>
+	<head>
+		<h1>Online Tutoring</h1>
+		<script type ="text/javascript">
+
+		function german()
+		{
+			var obj = document.getElementById("addS");
+			var obj2 = document.getElementById("remS");
+			var obj3 = document.getElementById("students");
+			obj.innerHTML = "Schüler hinzufügen";
+			obj2.innerHTML = "Nehmen der erste Student ab";
+			obj3.innerHTML = "Die Studenten um zu helfen";
+		}
+	
+		function spanish()
+		{
+			var obj = document.getElementById("addS");
+			var obj2 = document.getElementById("remS");
+			var obj3 = document.getElementById("students");
+			obj.innerHTML = "Agregar estudiante";
+			obj2.innerHTML = "Quitar el primer estudiante";
+			obj3.innerHTML = "Estudiantes para ayudar";
+		}
+		
+		function english()
+		{
+			var obj = document.getElementById("addS");
+			var obj2 = document.getElementById("remS");
+			var obj3 = document.getElementById("students");
+			obj.innerHTML = "Add student";
+			obj2.innerHTML = "Remove the first student";
+			obj3.innerHTML = "The students to help";
+		}
+		
+		</script>
+
+	</head>
+	<body>
+	
+		<button onclick="add()" id = "addS" >Add student</button>
+		<p id = "students">The students to help</p>
+		<ul id="studentsList"><li>Jhon Narvaez</li><li>Ju Wang</li><li>Frederich Schmidt</li></ul>
+		<button onclick="remove()" id = "remS">Remove the first student</button>
+	
+		</br></br>
+	    <input type="button" onclick="german();" value="Deutsch"/>
+		<input type="button" onclick="spanish();" value="Espa&ntilde;ol"/>
+		<input type="button" onclick="english();" value="English"/>
+	
+		<script type ="text/javascript">
+		
+		function add() {
+		var node = document.createElement("LI");
+		var input =prompt("Write an element");
+		var textnode = document.createTextNode(input);
+		node.appendChild(textnode);
+		document.getElementById("studentsList").appendChild(node);
+		}
+
+		function remove() {
+		var list = document.getElementById("studentsList");
+		list.removeChild(list.childNodes[0]);
+		}
+		</script>
+		
+	
+	</body>
+</html>
