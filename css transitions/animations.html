@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>	
+	<head>
+		<div id='img'>
+			<img src = "trad.jpg" width = "200"  height = "100" alt = "Logo">
+		</div>
+		<style>
+
+
+		</style>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header id="showcase">
+			<h1>Spanish Class</h1>
+		</header>
+		<div id="content" class ="intro">
+		If you want to study Spanish. Do it with us singing up or if you have an account sing in.
+		</div>
+		<button class="btn" onclick="signIn()" onclick= "signUp()">Sign in</button>
+		</br>
+		<button class="btn" onclick="signUp()">
+		Sign up</button>
+		
+		<script>		
+			function signIn()
+			{
+				window.location.href = "singIn.html"
+			}
+			
+			function signUp()
+			{
+				window.location.href = "singUp.html"
+			}
+		</script>
+	</body>
+</html>
