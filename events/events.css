@@ -1,0 +1,39 @@
+body 
+	{	
+		font-family: Arial;
+		background: #1ABCF0;
+		color: black;
+		line-height:1.6;
+		text-align: center;
+	}
+
+	.btn
+	{
+		display: inline-block;
+		color: green;
+		border: blue 1px solid;
+		margin-top:10px;
+		opacity: 0;
+		animation-name: btn;
+		animation-duration: 1s;
+		animation-delay: 0.5s;
+		animation-fill-mode:forwards;
+		transition-duration: 1s;
+	}
+	
+	.btn:hover
+	{
+		transform: rotateY(180deg);
+	}
+	
+	@keyframes btn
+	{
+
+		0%	{opacity:0}
+		100%{opacity:1}
+	}	
+	
+	.par
+	{
+		color: blue;
+	}

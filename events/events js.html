@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body id="myBody">
+<link rel="stylesheet" href="events.css">
+<button onclick="myBackground()" class="btn">Background</button>
+
+<script>
+function myBackground() {
+	document.getElementById("myBody").style.background='url(map.png)';
+}
+</script>
+
+</br>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="pika.gif" alt="Smiley" width="32" height="32">
+
+<p id="p1" class = "par">Go to Euskera music. Click Me!</p>
+<p id="p2" class = "par">->Sing Up for more Euskera music!<-</p>
+
+
+<script>
+document.getElementById("p1").onmouseover = function() {mouseOver()};
+document.getElementById("p1").onmouseout = function() {mouseOut()};
+document.getElementById("p1").onclick = function() {onClicks()};
+
+document.getElementById("p2").onclick = function() {toForm()};
+
+function toForm()
+{
+	window.location.href = "singUp.html"
+}
+
+function mouseOver()
+{
+	document.getElementById("p1").style.color="blue";
+	document.getElementById("p1").style.fontSize="20px";
+} 
+
+function onClicks()
+{
+	window.location.href = "https://www.youtube.com/watch?v=LRaeakNECr8&list=RDw3QPzUVx3Ps&index=2"
+}
+
+function mouseOut()
+{
+	document.getElementById("p1").style.color="red";
+	document.getElementById("p1").style.fontSize="15px";
+}
+</script>
+
+<script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+
+</body>
+</html> 
