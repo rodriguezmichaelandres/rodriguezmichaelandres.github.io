@@ -39,18 +39,18 @@ function loadDoc() {
 
 <p id="demo2">Let AJAX change this text.</p>
 
-<button type="button" onclick="loadDoc2()">Change Content</button>
+<button type="button" onclick="loadDoc2()">Change text</button>
 
 <script>
 function loadDoc2() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "ajax_info.txt", false);
+  xhttp.open("GET", "text.txt", false);
   xhttp.send();
   document.getElementById("demo2").innerHTML = xhttp.responseText;
 }
 </script>
 
-<h2>The XMLHttpRequest Object with File</h2>
+<h2>The XMLHttpRequest Object: Reading a Catalog</h2>
 
 <p id="demo"></p>
 <button type="button" onclick="catalogCall()">Change Content</button>
@@ -68,7 +68,8 @@ xhttp.onreadystatechange = function() {
     name = xmlDoc.getElementsByTagName("NAME");
     for (i = 0; i < user.length || i < email.length; i++) {
       txt = txt + user[i].childNodes[0].nodeValue + " " +  
-      email[i].childNodes[0].nodeValue + "<br>";
+      email[i].childNodes[0].nodeValue + " " + 
+      name[i].childNodes[0].nodeValue + "<br>";
     }
     document.getElementById("demo").innerHTML = txt;
   }
