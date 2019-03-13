@@ -2,7 +2,7 @@
 	{	
 		font-family: Arial;
 		background-image: url("map.png");
-		color: red;
+		color: black;
 		line-height:1.6;
 		text-align: center;
 	}
@@ -61,4 +61,8 @@
 	p{
 		color: green;
 		font-family: Arial;
+	}
+
+	h1{
+		color:red;
 	}
