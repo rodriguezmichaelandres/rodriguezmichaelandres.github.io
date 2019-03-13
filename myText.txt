@@ -1,1 +1,1 @@
-Opening File 
+This is an text file
