@@ -1,1 +1,1 @@
-Opening File 
+This is a txt file example
