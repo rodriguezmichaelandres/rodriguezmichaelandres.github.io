@@ -34,5 +34,20 @@ function loadDoc() {
   xhttp.send();
 }
 </script>
+		
+<h2>The XMLHttpRequest Object</h2>
+
+<p id="demo2">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc2()">Change Content</button>
+
+<script>
+function loadDoc2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "ajax_info.txt", false);
+  xhttp.send();
+  document.getElementById("demo2").innerHTML = xhttp.responseText;
+}
+</script>
 	</body>
 </html>
