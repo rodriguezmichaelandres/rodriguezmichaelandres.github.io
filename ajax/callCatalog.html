@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
+
 <h2>The XMLHttpRequest Object</h2>
-  <p id="demo"></p>
+
+<p id="demo"></p>
+<button type="button" onclick="catalogCall()">Change Content</button>
 <script>
+function catalogCall()
+{
 var xhttp, xmlDoc, txt, i, user, email, name;
 xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     xmlDoc = this.responseXML;
     txt = "";
-    user = xmlDoc.getElementsByTagName("USER");
-    email = xmlDoc.getElementsByTagName("EMAIL");
-    name = xmlDoc.getElementsByTagName("NAME");
+    user = xmlDoc.getElementsByTagName("ARTIST");
+    email = xmlDoc.getElementsByTagName("YEAR");
+    name = xmlDoc.getElementsByTagName("YEAR");
     for (i = 0; i < user.length || i < email.length; i++) {
       txt = txt + user[i].childNodes[0].nodeValue + " " +  
       email[i].childNodes[0].nodeValue + "<br>";
@@ -20,8 +25,10 @@ xhttp.onreadystatechange = function() {
     document.getElementById("demo").innerHTML = txt;
   }
 };
-xhttp.open("GET", "catalog.xml", true);
+xhttp.open("GET", "cd_catalog.xml", true);
 xhttp.send();
+}
 </script>
+
 </body>
 </html>
