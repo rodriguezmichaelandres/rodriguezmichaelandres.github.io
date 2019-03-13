@@ -61,9 +61,9 @@ xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     xmlDoc = this.responseXML;
     txt = "";
-    user = xmlDoc.getElementsByTagName("ARTIST");
-    email = xmlDoc.getElementsByTagName("YEAR");
-    name = xmlDoc.getElementsByTagName("YEAR");
+    user = xmlDoc.getElementsByTagName("USER");
+    email = xmlDoc.getElementsByTagName("EMAIL");
+    name = xmlDoc.getElementsByTagName("NAME");
     for (i = 0; i < user.length || i < email.length; i++) {
       txt = txt + user[i].childNodes[0].nodeValue + " " +  
       email[i].childNodes[0].nodeValue + "<br>";
