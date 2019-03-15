@@ -1,0 +1,84 @@
+body{
+	background-image: url("map.png");
+}
+
+.box{
+	width: 50px;
+	height: 50px;
+	border-top: 4px solid #0010;
+	background-color: red;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.start{
+	position: absolute;
+	top: 15px;
+	left: 75px;	
+}
+
+.js-box-animate{
+	animation: rotate 1s linear;
+}
+
+@keyframes rotate{
+	0% {
+		transform: rotate(0);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.plane{
+	transition: opacity 2s;
+	position: absolute;
+	top: 000px;
+	left: 300px;
+}
+
+.movement{
+		position: absolute;
+		top: 150px;
+		left: 900px;
+}
+
+.hidePlane{
+		position: absolute;
+		top: 100px;
+		left: 900px;
+}
+
+.showPlane{
+		position: absolute;
+		top: 125px;
+		left: 900px;
+}
+
+.js-plane-animate{
+	opacity: 0;
+}
+
+.js-plane-animate2{
+	  width: 256px;
+	  height: 255px;
+	  animation-name: planeMov;
+	  animation-duration: 5s;
+	  animation-delay: 0.5s;
+}
+
+.js-plane-animate3{
+	opacity: 1;
+}
+	  
+@keyframes planeMov {
+		0% 	{left:300px; top:000px;}
+		16%	{left:400px; top:100px;}
+		32%	{left:300px; top:200px;}
+		48%	{left:200px; top:200px;}
+		64%	{left:100px; top:100px;}
+		80%	{left:200px; top:000px;}
+		100%{left:300px; top:000px;}
+}
