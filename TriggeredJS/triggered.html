@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Triggered Animations</title>
+		<button class="hidePlane" onclick="fadeOut()">Hide Plane</button>
+		<button class="showPlane" onclick="fadeIn()">Show Plane</button>
+		<button class="movement" onclick="movement()">Movement</button>
+		<button class="rotate" onclick="rotate()">Start</button>
+		<script type="text/javascript">
+			function fadeOut(){
+				const plane = document.getElementById('plane1');
+				plane.style.opacity = '0';
+			}
+			
+			function fadeIn(){
+				const plane = document.getElementById('plane1');
+				plane.style.opacity = '1';
+			}
+			
+			function movement(){
+				var plane = document.getElementById('plane1').animate([
+					  { transform: 'translateY(0px)' }, 
+					  { transform: 'translateX(-800px)'},
+					  { transform: 'translateY(-220px)' },
+					  { transform: 'translateX(0px)' }
+					], { 
+					  // timing options
+					  duration: 3000,
+					  iterations: 1
+					});
+			}
+			
+			function rotate(){
+				var plane = document.getElementById('plane1').animate([
+						{transform: 'rotate(0)'},
+						{transform: 'rotate(360deg)'}
+						], { 
+					  // timing options
+					  duration: 2000,
+					  iterations: 1
+					});
+				}
+		</script>
+		<style media="screen">
+			.plane{
+			width: 320px;
+			height: 250px;
+			transition: opacity 2s;
+			position: absolute;
+			top:200px;
+			left: 500px;
+			animation-name: planeMov;
+			}
+		</style>
+	</head>
+	
+	<body style=background-image:url("map.png")>
+		
+		<div class="box"></div>
+		<div class="plane" id="plane1">
+		
+		<img class="plane" id="plane1" src="plane.png"/></div>
+	</body>
+</html>
