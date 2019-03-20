@@ -35,7 +35,6 @@
 
 	#content
 	{
-
 		animation-name: content;
 		animation-duration: 1s;
 	}
@@ -48,14 +47,11 @@
 
 	.btn
 	{
-		
 		display: inline-block;
 		color: green;
 		text-decoration: none;
-		padding: 1rem 2rem;
 		border: blue 1px solid;
 		margin-top:40px;
-		
 		background-color: #caebb7;
 		border:2px solid #5b973b;
 		transition: background-color 2s ease;
@@ -70,7 +66,6 @@
 
 	@keyframes btn
 	{
-
 		0%	{opacity:0}
 		100%{opacity:1}
 	}
@@ -78,8 +73,6 @@
 	.btn2
 	{
 		color: green;
-		height:50px;
-		width:117px;
 		background-color: #caebb7;
 		border:2px solid #5b973b;
 		transition: all 2s ease;
@@ -89,15 +82,19 @@
 	{
 		transform:rotate(180deg);
 		border-radius:35px;
-		height:50px;
-		width:100px;
 		border: 4px dotted #333;
 		background-color: #7FFFD4;
 	}
 
+	.plane
+	{
+	  width: 100px;
+	  height: 100px;
+	}
+	
 	#axis{
 	  width: 200px;
-	  height: 100px;
+	  height: 25px;
 	  position: relative;
 	  animation-name: planeMov;
 	  animation-duration: 5s;
@@ -107,10 +104,5 @@
 	}
 
 	@keyframes planeMov {
-	  0%   {left:0px; top:0px;}
-	  25%  {left:-100px; top:100px;}
-	  38%  {left:-250px; top:100px;}
-	  50%  {left:-300px; top:100px;}
-	  75%  {left:-400px; top:250px;}
-	  100% {left:-600px; top:250px;}
+	  0%   {left:150px; top:100px;}
 	}
