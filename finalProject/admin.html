@@ -2,20 +2,69 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="styleAdmin.css">
+
+
 </head>
 
-<body>
-<header>
-	<nav>
-		<a href="">1</a>
-		<a href="">2</a>
-		<a href="">3</a>
-		<a href="">4</a>
-	</nav>
-</header>
-<main>
-	<h2>Bienvenido admin<span class = "mostrarUsuario"></span></h2>
-</main>
+<body background="map.png">
+	<div id="sidebar" class="sidebar" style="width: 0px;">
+		<a href="#" class="button-close" onclick="hiddenM()">X</a>
+		<ul class="menu">
+			<li><a href="#">Grades</a></li>
+			<li><a href="#">Plan of Class</a></li>
+			<li><a href="#">Teachers</a></li>
+		</ul>
+	</div>
+	<div id="content" style="margin-left: 0px;">
+	<h1>Welcome!</h1>
+		<a id="open" class="open-close" href="javascript:void(0)" onclick="showM()" >Menu</a>
+		<a id="close" class="open-close" href="#" onclick="hiddenM()" >Close Menu</a>
+	</div>
 
+	<script>
+		function showM() {
+		document.getElementById("sidebar").style.width = "200px";
+		document.getElementById("content").style.marginLeft = "200px";
+		document.getElementById("open").style.display = "none";
+		document.getElementById("close").style.display = "inline";
+	}
+
+
+		function hiddenM() {
+		document.getElementById("sidebar").style.width = "0";
+		document.getElementById("content").style.marginLeft = "0";
+		document.getElementById("open").style.display = "inline";
+		document.getElementById("close").style.display = "none";
+	}
+
+</script>
+
+	<div id="taks" class="tasks"></br>
+		<p>Things to do</p>
+		<button onclick="add()" id = "addS" >Add task</button>
+		<p id = "students">Tasks</p>
+		<ul id="tasksList"><li>Review tests</li><li>Plan Tutoring</li><li>Certificates</li></ul>
+		<button onclick="remove()" id = "remS">Remove the first task</button>
+	
+		</br>
+	</div>
+	
+		<script type ="text/javascript">
+		
+		function add() {
+		var node = document.createElement("LI");
+		var input =prompt("Write an element");
+		var textnode = document.createTextNode(input);
+		node.appendChild(textnode);
+		document.getElementById("tasksList").appendChild(node);
+		}
+
+		function remove() {
+		var list = document.getElementById("tasksList");
+		list.removeChild(list.childNodes[0]);
+		}
+		</script>
+		
 </body>
 </html>
