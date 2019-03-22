@@ -16,11 +16,15 @@
 		<input type = "text" placeholder="Email" id = "txtCorreo"></br>
 		<input type = "password" placeholder="Clave" id = "txtContrasena"></br>
 		
-		<input type="button" value = "Enter" id="btnIngresar" class="btn">
+		<input type="button" value = "Enter" id="btnIngresar" class="btn" onclick="enterPage()">
 	 </form>	
 	<link rel="stylesheet" href="stylesSingIn.css">	
-	<script src="usuarios.js"></script>	 
-	<script src="sesionInicio.js"></script>	 
-	<script src="registrar.js"></script>	 
+	 
+	<script>
+		function enterPage()
+		{
+			window.location.href = "admin.html"
+		}
+	</script>
 	</body>
 </html>
