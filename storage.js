@@ -1,6 +1,19 @@
-saveLocalStorage();
-getLocalStorage();
-
+localStorageShow();
+function localStorageShow()
+{
+	x = new Boolean(false);
+	if(x)
+	{
+		getLocalStorage();
+	}
+	else
+	{
+		saveLocalStorage();
+		getLocalStorage();
+		x = false;
+	}
+		
+}
 function getLocalStorage()
 {
 if(localStorage.getItem("nameLS"))
