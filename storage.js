@@ -3,7 +3,7 @@ function localStorageShow()
 {
 	x = new Boolean(false);
 	if(x)
-	{saveLocalStorage();
+	{
 		getLocalStorage();
 	}
 	else
