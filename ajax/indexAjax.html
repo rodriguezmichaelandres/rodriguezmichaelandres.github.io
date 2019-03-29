@@ -6,11 +6,14 @@
 	</head>
 	<body>
 	<link rel="stylesheet" href="styles.css">
-<h2>Reading a Catalog</h2>
+<h2>Reading a Catalog Ajax</h2>
 
 <p id="demo"></p>
  
-<script>
+<button type="button" onclick="catalogCall()" class = "btn">Show Catalog</button>
+		<script>
+		function catalogCall()
+		{
 	var xhttp, xmlDoc, txt, i, user, email, name;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -30,6 +33,7 @@
 	};
 	xhttp.open("GET", "cd_catalog.xml", true);
 	xhttp.send();
+	}
 </script>
 
 </body>
