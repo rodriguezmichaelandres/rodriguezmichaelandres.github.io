@@ -1,29 +1,12 @@
-<!DOCTYPE html>
+<!doctype>
 <html>
-<body>
-
-<h2>The XMLHttpRequest Object</h2>
-
-<p id="demo"></p>
- 
-<script>
-var xhttp, xmlDoc, txt, x, i, y;
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    xmlDoc = this.responseXML;
-    txt = "";
-    x = xmlDoc.getElementsByTagName("USER");
-    y = xmlDoc.getElementsByTagName("NAME");
-    for (i = 0; i < x.length; i++) {
-      txt = txt + x[i].childNodes[0].nodeValue + " " + y[i].childNodes[0].nodeValue + "<br>";
-    }
-    document.getElementById("demo").innerHTML = txt;
-  }
-};
-xhttp.open("GET", "cd_catalog.xml", true);
-xhttp.send();
-</script>
-
-</body>
+	<head>
+		<meta CHARET="UTF-8">
+		<title>Local Storage
+		</title></br>
+	</head>
+<h3>Local Storage</h3>
+	<body>
+		<script src="catalog.js"></script>
+	</body>
 </html>
