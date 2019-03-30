@@ -13,8 +13,8 @@ xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     xmlDoc = this.responseXML;
     txt = "";
-    x = xmlDoc.getElementsByTagName("ARTIST");
-    y = xmlDoc.getElementsByTagName("YEAR");
+    x = xmlDoc.getElementsByTagName("USER");
+    y = xmlDoc.getElementsByTagName("NAME");
     for (i = 0; i < x.length; i++) {
       txt = txt + x[i].childNodes[0].nodeValue + " " + y[i].childNodes[0].nodeValue + "<br>";
     }
