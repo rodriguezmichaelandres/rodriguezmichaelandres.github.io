@@ -1,3 +1,4 @@
+catalogCall();
 function catalogCall()
 	{
 	var xhttp, xmlDoc, txt, i, user, email, name;
