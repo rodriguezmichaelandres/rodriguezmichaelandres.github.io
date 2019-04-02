@@ -6,9 +6,23 @@
 	</head>
 	<body>
 		<link rel="stylesheet" href="styles.css">
-		<h2>Reading a Catalog</h2>
+				<div id="demo1">
+		<h2>Change Content</h2>
+		<button type="button" onclick="loadDoc()" class = "btn">Change Content</button>
+		</div>
 
-		<script src="ajaxCatalog.js">test ajax!!!!!!!!!!!!!!!!</script>
-<p>asd</p>
+		<script>
+		function loadDoc() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  document.getElementById("demo1").innerHTML =
+			  this.responseText;
+			}
+		  };
+		  xhttp.open("GET", "ajax_info.txt", true);
+		  xhttp.send();
+		}
+		</script>
 	</body>
 </html>
