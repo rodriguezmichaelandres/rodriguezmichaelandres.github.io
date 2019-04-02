@@ -11,9 +11,10 @@
 	<div id="sidebar" class="sidebar" style="width: 0px;">
 		<a href="#" class="button-close" onclick="hiddenM()">X</a>
 		<ul class="menu">
-			<li><a href="#">Grades</a></li>
+			<li><a href="#" onclick = "catalogCall()">Grades</a></li>
 			<li><a href="#">Plan of Class</a></li>
 			<li><a href="#">Teachers</a></li>
+			<li><a href="#">Students</a></li>
 		</ul>
 	</div>
 	<div id="content" style="margin-left: 0px;">
@@ -30,6 +31,28 @@
 		document.getElementById("close").style.display = "inline";
 	}
 
+		function catalogCall()
+		{
+		var xhttp, xmlDoc, txt, i, user, email, name;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			xmlDoc = this.responseXML;
+			txt = "";
+			user = xmlDoc.getElementsByTagName("USER");
+			email = xmlDoc.getElementsByTagName("EMAIL");
+			name = xmlDoc.getElementsByTagName("NAME");
+			for (i = 0; i < user.length || i < email.length; i++) {
+			  txt = txt + user[i].childNodes[0].nodeValue + " " +  
+			  email[i].childNodes[0].nodeValue + " " + 
+			  name[i].childNodes[0].nodeValue + "<br>";
+			}
+			document.getElementById("demo").innerHTML = txt;
+		  }
+		};
+		xhttp.open("GET", "cd_catalog.xml", true);
+		xhttp.send();
+		}
 
 		function hiddenM() {
 		document.getElementById("sidebar").style.width = "0";
