@@ -1,0 +1,39 @@
+#flex_first{
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_list{
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	#flex_first{
+	  display: flex;
+	  height: 300px;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.center_list{
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#flex_first{
+	  display: flex;
+	  height: 300px;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.center_list{
+		justify-content: center;
+		align-items: center;
+	}
+}
