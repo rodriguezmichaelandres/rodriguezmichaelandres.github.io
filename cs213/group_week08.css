@@ -1,12 +1,35 @@
-#flex_first{
-  display: flex;
-  height: 300px;
-  justify-content: center;
-  align-items: center;
+.blue_rounded{
+	display: flex;
+    flex-wrap: wrap;
 }
-
-.center_list{
+#flex_first{
+	display: flex;
+    flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	margin-left: auto;
+	margin-right: auto;	
 }
 
+#flex_second{
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+
+}
+#color, #email, #phone, #address, #name{
+	width:100%;
+}
+label{
+	display:block;
+}
+
+input{
+	flex: 100%;
+}
+
+.form-row > button {
+	background-color: white;
+	display: block;
+	min-width: 100%
+}
