@@ -105,21 +105,21 @@ header{
 }
 
 .container-campus{
-	max-width:100%;
+	max-width:auto;
     max-height:auto;
     border-radius:150px;
     border:10px solid black;
 }
 
 .container-teacher{
-	max-width:100%;
+	max-width:auto;
     max-height:auto;
     border-radius:150px;
     border:10px solid black;
 }
 
 .container-clubs{
-	max-width:100%;
+	max-width:auto;
     max-height:auto;
     border-radius:150px;
     border:10px solid black;
