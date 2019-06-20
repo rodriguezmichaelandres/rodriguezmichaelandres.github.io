@@ -29,7 +29,7 @@ function loadMex() {
       document.getElementById("cities").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "demo_get2.asp?fname=Henry&lname=Ford", true);
+  xhttp.open("GET", "mexico.txt", true);
   xhttp.send();
 }
 
@@ -40,7 +40,7 @@ function loadCan() {
       document.getElementById("cities").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "demo_get.asp", true);
+  xhttp.open("GET", "canada.txt", true);
   xhttp.send();
 }
 
@@ -51,7 +51,7 @@ function loadRus() {
       document.getElementById("cities").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "demo_get2.asp?fname=Henry&lname=Ford", true);
+  xhttp.open("GET", "russia.txt", true);
   xhttp.send();
 }
 </script>
