@@ -26,6 +26,16 @@ function loadDoc() {
   xhttp.send();
 }
 </script>
+<div>
+<h2>Create Object from JSON String</h2>
 
+<p id="demo2"></p>
+
+<script>
+var txt = '{"name":"John", "age":30, "city":"New York"}'
+var obj = JSON.parse(txt);
+document.getElementById("demo2").innerHTML = obj.name + ", " + obj.age;
+</script>
+</div>
 </body>
 </html>
