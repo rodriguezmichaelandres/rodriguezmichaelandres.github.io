@@ -15,15 +15,11 @@
 <script>
 function loadDoc() {
   var porId=document.getElementById('nombre').value;
-  var xxx;
-  var obj = JSON.parse(xxx);
+  var obj = JSON.parse(porID);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var xxx;
-      xxx=document.getElementById("demo").innerHTML = this.responseText;
-      var obj = JSON.parse(xxx);
-	  document.getElementById("demo").innerHTML = obj;
+      document.getElementById("demo").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", porId, true);
