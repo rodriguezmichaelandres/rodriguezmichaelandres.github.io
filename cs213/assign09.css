@@ -4,7 +4,7 @@ body{
 * {
   box-sizing: border-box;
 }
-.sidenav {
+.part1 {
   height: 100%;
   width: 200px;
   position: fixed;
@@ -15,17 +15,17 @@ body{
   overflow-x: hidden;
 }
 
-.sidenav p {
+.part1 p {
   background-color: #ddd;
   color: red;
 }
 
-.sidenav button {
+.part1 button {
   background-color: #ddd;
   color: pink;
 }
 
-.content {
+.part2 {
   margin-left: 200px;
   padding-left: 20px;
 }
