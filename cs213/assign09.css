@@ -1,3 +1,31 @@
 body{
-	background-color: red;
+	background-color: aquamarine;
+}
+* {
+  box-sizing: border-box;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.sidenav p {
+  background-color: #ddd;
+  color: red;
+}
+
+.sidenav button {
+  background-color: #ddd;
+  color: pink;
+}
+
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
 }
