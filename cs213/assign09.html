@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<div class = 'part1'>
 <h2>AJAX</h2>
 
 <button type="button" onclick="loadUsa()">USA</button>
@@ -9,7 +9,20 @@
 <button type="button" onclick="loadCan()">Canada</button>
 <button type="button" onclick="loadRus()">Russia</button>
 <p id="cities"><br></p>
+</div>
 
+<div class = 'part2'>
+<h2>The XMLHttpRequest Object</h2>
+<form>
+  File:<br>
+  <input type="text" name="file" id='nombre' value='json.txt'><br>
+</form> 
+<button type="button" onclick="loadDoc()">Request data</button>
+
+
+
+<p id="demo"></p>
+</div>
 <script>
 function loadUsa() {
   var xhttp = new XMLHttpRequest();
@@ -52,6 +65,26 @@ function loadRus() {
     }
   };
   xhttp.open("GET", "russia.txt", true);
+  xhttp.send();
+}
+  
+//part2
+function loadDoc() {
+  var porId=document.getElementById('nombre').value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var ob, xxx, i, x, j;
+      xxx=this.responseText;
+      ob = JSON.parse(xxx);
+      x="<h3>"+"List" + "<br>"+"</h3>";
+        for(i in ob.students){
+    	   x += " " + ob.students[i].first + " " +ob.students[i].last + "<br>" + ob.students[i].address.city + "<br>" + ob.students[i].address.state + "<br>" + ob.students[i].address.zip + "<br>" + ob.students[i].major + "<br>" + ob.students[i].gpa + "<br>" +"<br>";
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+  };
+  xhttp.open("GET", porId, true);
   xhttp.send();
 }
 </script>
