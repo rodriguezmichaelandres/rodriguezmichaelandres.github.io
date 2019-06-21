@@ -18,12 +18,16 @@ function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var ob, xxx;
-      xxx=document.getElementById("demo").innerHTML = this.responseText;
+      var ob, xxx, i, x, j;
+      xxx=this.responseText;
       ob = JSON.parse(xxx);
-      document.getElementById("demo").innerHTML = ob.student;
-      //document.getElementById("demo").innerHTML = xxx;
-    }
+      x="List\n"
+      for(i in ob.students.[i]){
+    	 for(j in ob.students[i].first){
+         x+=ob.name.students[i].first[j] + "<br>";
+       }
+       document.getElementById("demo").innerHTML = x;    
+     }
   };
   xhttp.open("GET", porId, true);
   xhttp.send();
