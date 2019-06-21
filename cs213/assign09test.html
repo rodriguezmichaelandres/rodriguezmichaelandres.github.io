@@ -21,13 +21,12 @@ function loadDoc() {
       var ob, xxx, i, x, j;
       xxx=this.responseText;
       ob = JSON.parse(xxx);
-      x="List\n"
-      for(i in ob.students.[i]){
-    	 for(j in ob.students[i].first){
-         x+=ob.name.students[i].first[j] + "<br>";
-       }
-       document.getElementById("demo").innerHTML = x;    
-     }
+      x="<h3>"+"List" + "<br>"+"</h3>";
+        for(i in ob.students){
+    	   x += " " + ob.students[i].first + " " +ob.students[i].last + 			"<br>" + ob.students[i].address.city + "<br>" + ob.students[i].address.state + "<br>" + ob.students[i].address.zip + "<br>" + ob.students[i].major + "<br>" + ob.students[i].gpa + "<br>" +"<br>";
+        }
+        document.getElementById("demo").innerHTML = x;    
+    }
   };
   xhttp.open("GET", porId, true);
   xhttp.send();
