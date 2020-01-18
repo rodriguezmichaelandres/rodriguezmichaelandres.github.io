@@ -1,0 +1,33 @@
+body{
+	text-align: justify;
+	background-image: url("https://fondos.io/wp-content/uploads/2019/01/wood-wallpapers-hd_929.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Arial;
+	font-size: 25px;
+	color:red;
+}
+
+* {
+  box-sizing: border-box;
+}
+.part1 {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  margin-left: 60%;
+  padding-left: 50px;
+}
+
+.part1 p {
+  color: red;
+}
+
+.part2 p{
+	color: white;
+}
