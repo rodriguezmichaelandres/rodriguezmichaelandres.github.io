@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign 06</title>
+	<link rel=styleSheet href="assign11.css" type="text/css" >
+	<!-- <script type="text/javascript" src="assign06.js"></script> -->
+</head>
+<body onLoad="hideErrors()">
+
+<form action="assign11.php" onReset="resetForm()" onSubmit="doNotSubmit()" method="post">
+    <h1>Purchase Page</h1>
+
+    <div class="form_item">
+        <label for="firstname">First Name</label>
+        <input id="firstname" class="check_validation" name="first_name" type="text" onInput="validateForm(this)"
+               required>
+        <span id="firstnameError" class="error_msg">Please enter a first name.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" class="check_validation" name="last_name" type="text" onInput="validateForm(this)"
+               required>
+        <span id="lastnameError" class="error_msg">Please enter a last name.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="address">Address (street, city, state, zip)</label>
+        <textarea id="address" class="check_validation" name="address" onInput="validateForm(this)" cols="25" rows="5"
+                  required></textarea>
+        <span id="addressError" class="error_msg">Please enter an address.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="phone">Phone (123-123-1234)</label>
+        <input id="phone" class="check_validation" name="phone" type="text" onInput="validateForm(this)" required>
+        <span id="phoneError" class="error_msg">Please enter a phone number in the format 123-123-1234.</span>
+    </div>
+
+    <div class="form_item">
+        <table>
+            <tr>
+                <th></th>
+                <th>Items</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><input name="item_0" class="product" type="checkbox" value="item_0|1.23" onChange="updateTotal()">
+                </td>
+                <td>Item 0</td>
+                <td>$1.23</td>
+            </tr>
+            <tr>
+                <td><input name="item_1" class="product" type="checkbox" value="item_1|2.54" onChange="updateTotal()">
+                </td>
+                <td>Item 1</td>
+                <td>$2.54</td>
+            </tr>
+            <tr>
+                <td><input name="item_2" class="product" type="checkbox" value="item_2|3.00" onChange="updateTotal()">
+                </td>
+                <td>Item 2</td>
+                <td>$3.00</td>
+            </tr>
+            <tr>
+                <td><input name="item_3" class="product" type="checkbox" value="item_3|4.11" onChange="updateTotal()">
+                </td>
+                <td>Item 3</td>
+                <td>$4.11</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form_item">
+        <label for="total">Total</label>
+        <input id="total" name="total" type="text" readonly>
+    </div>
+
+    <div class="form_item">
+        <span class="card_type">Credit Card Type</span>
+        <label for="card_0"><input id="card_0" name="card" value="visa" type="radio" checked> Visa</label>
+        <label for="card_1"><input id="card_1" name="card" value="mastercard" type="radio"> Mastercard</label>
+        <label for="card_2"><input id="card_2" name="card" value="american express" type="radio"> American
+            Express</label>
+    </div>
+
+    <div class="form_item">
+        <label for="creditcard">Credit Card Number</label>
+        <input id="creditcard" class="check_validation" name="credit_card" type="text" onInput="validateForm(this)"
+               required>
+        <span id="creditcardError" class="error_msg">Please enter a credit card with 16 digits.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="expiration">Credit Card Expiration (MM/YYYY)</label>
+        <input id="expiration" class="check_validation" name="exp_date" type="text" onInput="validateForm(this)"
+               required>
+        <span id="expirationError"
+              class="error_msg">Please enter a credit card expiration date in the format MM/YYYY.</span>
+    </div>
+
+    <div class="form_item">
+        <button name="reset" id="reset" type="reset">Reset</button>
+        <button name="validate" type="submit" onClick="recheckForm()">Submit</button>
+    </div>
+</form>
+
+<!--
+the scripts could be put into an external js file
+<script src="assign06.js"></script>
+-->
+<script>
+	function hideErrors() {
+		var errorSpans = document.getElementsByClassName("error_msg");
+
+		for (var i = 0; i < errorSpans.length; i++) {
+			errorSpans[i].style["visibility"] = "hidden";
+		}
+
+		document.getElementById("reset").click();
+	}
+
+	function updateTotal() {
+		var products = document.getElementsByClassName("product");
+		var total = 0;
+
+		for (var i = 0; i < products.length; i++) {
+			if (products[i].checked) {
+				total += parseFloat(products[i].value.split("|")[1]);
+			}
+		}
+
+		document.getElementById("total").value = total.toFixed(2);
+	}
+
+	function validateForm(el) {
+		var value = el.value;
+		var id = el.id;
+
+		var validation = "success";
+		switch (id) {
+			case "firstname":
+			case "lastname":
+			case "address":
+				if (value.length < 1) {
+					validation = "error";
+				}
+				break;
+			case "phone":
+				if (!value.match(/^\s*\d{3}-\d{3}-\d{4}\s*$/)) {
+					validation = "error";
+				}
+				break;
+			case "creditcard":
+				if (!value.match(/^\s*\d{4}\ \d{4}\ \d{4}\ \d{4}|\d{16}\s*$/)) {
+					validation = "error";
+				}
+				break;
+			case "expiration":
+				if (!value.match(/^\s*([1-9]|[12]\d|[3][01])\/((1((7(5[3-9]|[6-9]\d))|[89]\d{2}))|(2(0\d{2}|10{2})))\s*$/)) {
+					validation = "error";
+				}
+				break;
+			default:
+				validation = "error";
+		}
+
+		if (validation === "error") {
+			document.getElementById(id + "Error").style.visibility = "visible";
+			document.getElementById(id).focus();
+		} else {
+			document.getElementById(id + "Error").style.visibility = "hidden";
+		}
+
+		return validation;
+	}
+
+	function resetForm() {
+		hideErrors();
+		document.getElementById("firstname").focus();
+		return true;
+	}
+
+	function doNotSubmit() {
+		return false;
+	}
+
+	function recheckForm() {
+		var inputs = document.getElementsByClassName("check_validation");
+
+		var totalValidation = "success";
+		for (var i = 0; i < inputs.length; i++) {
+			currValidation = validateForm(inputs[i]);
+
+			if (currValidation !== "success") {
+				totalValidation = currValidation;
+			}
+		}
+
+		if (totalValidation === "success") {
+			return true;
+		}
+	}
+</script>
+
+</body>
+</html>

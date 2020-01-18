@@ -1,0 +1,42 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .form_item {
+            padding: 5px;
+        }
+
+        .error_msg {
+            color: red;
+            font-size: 1rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: .9rem;
+        }
+
+        table td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .card_type {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        input, button, textarea {
+            font-size: 1rem;
+        }
