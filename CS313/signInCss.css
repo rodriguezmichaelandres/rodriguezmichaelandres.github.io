@@ -1,0 +1,46 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-size: 15px;
+			background-image: linear-gradient(90deg, #7e4a35,#b9936c, #dac292, #e3e0cc);
+			border: 15px solid transparent;
+			padding: 15px;
+			border-image-repeat: repeat;
+        }
+
+        .form_item {
+            padding: 5px;
+        }
+
+        .error_msg {
+            color: red;
+            font-size: 1rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            font-size: .9rem;
+        }
+
+        table td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .card_type {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        input, button, textarea {
+            font-size: 1rem;
+        }

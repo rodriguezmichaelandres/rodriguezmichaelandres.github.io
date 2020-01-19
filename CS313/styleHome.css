@@ -1,0 +1,92 @@
+#n3, #basedBooks:hover{
+	justify-content:center;
+	font-family: comic sans ms;
+	color: blue;
+	text-align: center;
+}
+
+#n1:hover{
+	font-weight: bold;
+	color: blue;
+}
+
+#history:hover{
+	font-weight: bold;
+	color: blue;
+	font-size: 20px;	
+}
+
+#basedBooks:hover, #booksSet:hover{
+	font-weight: bold;
+}
+
+a:link{
+	color: blue;	
+}
+
+a:visited{
+	color: brown;
+}
+#n1{
+	font-family: comic sans ms;
+	font-size: 50px;
+	color: blue;
+	text-align: center;
+}
+
+body{
+	background-image: linear-gradient(90deg, #7e4a35,#b9936c, #dac292, #e3e0cc);
+	border: 15px solid transparent;
+	padding: 15px;
+	border-image-source: url(https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/54/23/cf/shutterstock-249573040-3.jpg);
+	border-image-repeat: repeat;
+	border-image-slice: 30;
+}
+
+#booksSet{
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-size: 25px;
+	border: 15px solid transparent;
+	padding: 15px;
+	border-image-source: url('https://fanatical.imgix.net/product/original/16246bc8-2145-4ab9-a4fe-3b4182f21b48.jpg?auto=compress,format&w=400&fit=max');
+	border-image-repeat: repeat;
+	border-image-slice: 30;
+	margin-right: 800px;
+	margin-left:100px;
+}
+
+#basedBooks{
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-size: 25px;
+	border: 15px solid transparent;
+	padding: 15px;
+	border-image-source: url('http://bookdist.blob.core.windows.net/bookimages/978(300p)/14671/9781467141666-FrontCvr-300p.png');
+	border-image-repeat: repeat;
+	border-image-slice: 30;
+	margin-left: 800px;
+	margin-right:100px;
+	margin-top: -145px;
+}
+
+#history{
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-size: 20px;
+	border: 15px solid transparent;
+	padding: 15px;
+	border-image-source: url('http://mouse.latercera.com/wp-content/uploads/2017/06/ww2.jpg');
+	border-image-repeat: repeat;
+	border-image-slice: 30;
+	margin-left: 200px;
+	margin-right:100px;
+	margin-top: 140px;
+}
+
+.images{
+	width:600px;
+    height:400px;
+    border-radius:150px;
+    border:10px solid #666;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+	<link rel=stylesheet href="signInCss.css" type="text/css">
+	<script type="text/javascript" src="javaHome.js"></script>
+
+</head>
+<body onLoad="hideErrors()">
+
+<form action="signUp.php" onReset="resetForm()" onSubmit="doNotSubmit()" method="post">
+    <h1>Sign Up</h1>
+
+    <div class="form_item">
+        <label for="firstname">First Name</label>
+        <input id="firstname" class="check_validation" name="first_name" type="text" onInput="validateForm(this)"
+               required>
+        <span id="firstnameError" class="error_msg">Please enter a first name.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" class="check_validation" name="last_name" type="text" onInput="validateForm(this)"
+               required>
+        <span id="lastnameError" class="error_msg">Please enter a last name.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="email">Email </label>
+        <input id="email" class="check_validation" name="email" type="text" onInput="validateForm(this)" required></input>
+        <span id="emailError" class="error_msg">Please enter an email.</span>
+    </div>
+
+    <div class="form_item">
+        <label for="phone">Phone (123-123-1234)</label>
+        <input id="phone" class="check_validation" name="phone" type="text" onInput="validateForm(this)" required>
+        <span id="phoneError" class="error_msg">Please enter a phone number in the format 123-123-1234.</span>
+    </div>
+
+    <div class="form_item">
+        <button name="reset" id="reset" type="reset">Reset</button>
+        <button name="validate" type="submit" onClick="recheckForm()">Submit</button>
+    </div>
+
+</form>
+
+
+
+</body>
+</html>
